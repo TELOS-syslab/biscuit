@@ -61,7 +61,7 @@ CBINS := hello fault fork getpid fstest fswrite fsmkdir fscreat fsbigwrite \
 	  pipetest kill killtest mmaptest usertests thtests pthtests \
 	  mknodtest sockettest mv sleep time true init sync reboot ebizzy \
 	  uname pwd rmtree halp less lnc rshd bimage fweb fcgi stress \
-	  smallfile largefile cksum head goodcit mmapbench vary pstat
+	  smallfile largefile cksum head goodcit mmapbench vary pstat pagefault
 
 FSCPROGS := $(addprefix fsdir/bin/,$(CBINS))
 CPROGS := $(addprefix user/c/,$(CBINS))
@@ -223,7 +223,7 @@ qemu-gdb: gqemu-gdb
 
 QOPTS += -device ahci,id=ahci0 \
 	-drive file=go.img,if=none,format=raw,id=drive-sata0-0-0 \
-	-device ide-drive,drive=drive-sata0-0-0,id=sata0-0-0,bus=ahci0.0
+	-device ide-hd,drive=drive-sata0-0-0,id=sata0-0-0,bus=ahci0.0
 
 old_qemu: d.img
 	$(QEMU) $(QOPTS) -hda d.img

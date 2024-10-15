@@ -83,6 +83,7 @@
 /user/c/goodcit
 /user/c/vary
 /user/c/pstat
+/user/c/pagefault
 /user/cxx/mail-enqueue
 /user/cxx/mail-qman
 /user/cxx/mail-deliver
@@ -167,3 +168,4 @@
 /fsdir/bin/parrun
 /fsdir/bin/mmapbomb
 /fsdir/bin/mmapbench
+/fsdir/bin/pagefault
